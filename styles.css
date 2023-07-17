@@ -181,7 +181,7 @@
 /* Hero Section CSS */
 
 .main {
-    background-color: #141414 ;
+  background: #211D21;
 }
 
 .main__container {
@@ -190,16 +190,185 @@
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    height: 90vh;
-    background-color: #141414;
+    height: 80vh;
+    height: 700px;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
+    margin-right: 150px;
 }
 
 .main__content h1 {
     font-size: 4rem;
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%,);
+    background-color: #FFFBF2;
+    background-image: linear-gradient(to top, #FFFBF2 0%, #DFE2DB 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+  font-size: 2rem;
+  background-color: #C10206;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content img {
+  size: 20%;
+}
+
+
+.main__btn {
+  font-size: 2rem;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  color: #010A10;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main__btn a {
+  position: relative;
+  z-index: 2;
+  color: #010A10;
+  text-decoration: none;
+}
+
+.main__btn::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #C10206;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main__btn:hover {
+  color: #fff;
+}
+
+.main__btn:hover::after{
+  width: 100%;
+}
+
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  height: 80%;
+  width: 80%;
+}
+
+body {
+  background-color: #211D21;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 80vh;
+  }
+
+  .main__content {
+    text-align: center;
+  }
+
+  .main__content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .main__content h2 {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    .main__content h1 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+  
+    .main__content h2 {
+      font-size: 2rem;
+    }
+  
+    .main__content p {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+  
+    .main__btn {
+      padding: 12px 36px;
+      margin: 2.5rem 0;
+    }
+  }
+
+}
+
+/* Services CSS */
+.services {
+  background: #211D21;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.services h1 {
+  color:  #FFFBF2;
+  font-size: 4rem;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.services h2 {
+  color:  #FFFBF2;
+  font-size: 2.5rem;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.services p {
+  color:  #FFFBF2;
+  font-size: 1rem;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+  
+.services__card iframe {
+  border-radius: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.services__card button {
+  align-self: center;
+  align-items: center;
+  justify-self: center;
 }
